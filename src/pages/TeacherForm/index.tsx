@@ -48,7 +48,7 @@ function TeacherFrom() {
         });
     }
 
-    function setScheduleItemValue(position: number, field: string, value: string) {
+    function setScheduleItemValue(position: Number, field: string, value: string) {
         const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
             if (index === position) {
                 return { ...scheduleItem, [field]: value };
@@ -105,9 +105,9 @@ function TeacherFrom() {
                             return (
                                 <div className="schedule-item" key={scheduleItem.week_day}>
                                     <Select
-                                        name='week-day'
+                                        name='week_day'
                                         label='Dia da semana'
-                                        onChange={e => setScheduleItemValue(index, 'week-day', e.target.value)}
+                                        onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
                                         value={scheduleItem.week_day}
                                         options={[
                                             { value: '0', label: 'Domingo' },
